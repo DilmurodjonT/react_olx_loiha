@@ -1,9 +1,10 @@
 import React from "react";
 import c from "./Navbar.module.scss";
-import Container from "../../utils/Components";
+import { Container } from "../../utils/Components";
 import logo from "../../assets/logo.png";
-import { useLocation, Link } from "react-router-dom";
-import { FiMessageCircle } from "react-icons/fi";
+import { useLocation } from "react-router-dom";
+import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
+import { UniversalLink } from "../../utils/Components";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -11,7 +12,7 @@ const Navbar = () => {
   return pathname.includes("/auth") ? (
     <></>
   ) : (
-    <div className={c.navbar}>
+    <nav className={c.navbar}>
       <div className={c.container}>
         <Container>
           <div className={c.navbar__wrapper}>
@@ -26,15 +27,18 @@ const Navbar = () => {
                 <span> | </span>
                 <li>EN</li>
               </ul>
-              <Link className={c.navbar__link}>
-                <FiMessageCircle />
-                Xabarlar
-              </Link>
+              <UniversalLink
+                text="Xabarlar"
+                Link="/"
+                icon={<FiMessageCircle />}
+              />
+              <UniversalLink text="" Link="/" icon={<FiHeart />} />
+              <UniversalLink text="Xisobingiz" Link="/auth" icon={<FiUser />} />
             </div>
           </div>
         </Container>
       </div>
-    </div>
+    </nav>
   );
 };
 

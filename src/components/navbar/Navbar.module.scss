@@ -22,9 +22,13 @@ $main-color-dark: #002e34;
 .navbar__menu {
   display: flex;
   align-items: center;
+  gap: 0 40px;
 }
 
 .navbar__language__list {
   display: flex;
   gap: 0 5px;
+  li {
+    font-size: 18px;
+  }
 }
