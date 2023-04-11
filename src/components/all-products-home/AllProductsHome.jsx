@@ -17,19 +17,20 @@ const AllProductsHome = () => {
   }, []);
   return (
     <div>
-      {AllProductsData.splice(0, AllProductsData.length - 1).map(
+      {AllProductsData.slice(0, AllProductsData.length - 1).map(
         (categoryItem) => (
-          <div>
+          <div className={c.allproducts__card}>
             <h2>{categoryItem.categoryName_uz} ===========</h2>
             <Swiper
               slidesPerView={7}
               spaceBetween={30}
+              loop={true}
               navigation={true}
               pagination={{
                 clickable: true,
               }}
               className="mySwiper"
-              modules={Navigation}
+              modules={[Navigation]}
             >
               {categoryItem.allRefinedProducts.map((product) => (
                 <SwiperSlide>
