@@ -1,0 +1,29 @@
+$main-color-dark: #002e34;
+
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth__form {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  height: 600px;
+}
+
+.auth__nav {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    color: #a09e9e;
+  }
+  .auth__link__active {
+    color: $main-color-dark;
+    border-bottom: 2px solid $main-color-dark;
+  }
+}

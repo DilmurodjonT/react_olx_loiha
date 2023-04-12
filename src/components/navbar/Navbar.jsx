@@ -33,7 +33,11 @@ const Navbar = () => {
                 icon={<FiMessageCircle />}
               />
               <UniversalLink text="" Link="/" icon={<FiHeart />} />
-              <UniversalLink text="Xisobingiz" Link="/auth" icon={<FiUser />} />
+              <UniversalLink
+                text="Xisobingiz"
+                Link="/auth/login"
+                icon={<FiUser />}
+              />
             </div>
           </div>
         </Container>
