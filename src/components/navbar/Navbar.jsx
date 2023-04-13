@@ -29,13 +29,13 @@ const Navbar = () => {
               </ul>
               <UniversalLink
                 text="Xabarlar"
-                Link="/"
+                link="/"
                 icon={<FiMessageCircle />}
               />
               <UniversalLink text="" Link="/" icon={<FiHeart />} />
               <UniversalLink
                 text="Xisobingiz"
-                Link="/auth/login"
+                link="/auth/login"
                 icon={<FiUser />}
               />
             </div>

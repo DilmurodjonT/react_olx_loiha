@@ -10,7 +10,7 @@ const Auth = () => {
     if (!pathname.includes("register")) {
       navigate("/auth/login");
     }
-  }, []);
+  }, [navigate, pathname]);
 
   return (
     <div className={c.auth}>
