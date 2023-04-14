@@ -1,5 +1,11 @@
 {
   "message": "Message",
   "account": "Yor account",
-  "main-categories": "Main categories"
+  "main-categories": "Main categories",
+  "log in via Facebook": "Log in via Facebook",
+  "access through Apple": "Access through Apple",
+  "sign in with Google": "Sign in with Google",
+  "login": "Login",
+  "register": "Register",
+  "or": "OR"
 }

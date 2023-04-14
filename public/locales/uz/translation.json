@@ -1,5 +1,11 @@
 {
   "message": "Xabarlar",
   "account": "Hisobingiz",
-  "main-categories": "Bosh toifalar"
+  "main-categories": "Bosh toifalar",
+  "log in via Facebook": "Facebook orqali kirish",
+  "access through Apple": "Apple orqali kirish",
+  "sign in with Google": "Google orqali kirish",
+  "login": "Tizimga kirish",
+  "register": "Roʻyxatdan oʻtish",
+  "or": "YOKI"
 }

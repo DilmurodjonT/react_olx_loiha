@@ -1,5 +1,11 @@
 {
   "message": "Сообщение",
   "account": "Ваш счет",
-  "main-categories": "Основные категории"
+  "main-categories": "Основные категории",
+  "log in via Facebook": "Войти через Facebook",
+  "access through Apple": "Доступ через Apple",
+  "sign in with Google": "Войти через Google",
+  "login": "Авторизоваться",
+  "register": "Зарегистрироваться",
+  "or": "ИЛИ"
 }

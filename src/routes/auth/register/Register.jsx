@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import c from "../Auth.module.scss";
+import c from "./Register.module.scss";
 
 const Register = () => {
   const [userdata, setUserdata] = useState({
@@ -18,7 +18,7 @@ const Register = () => {
   }
   return (
     <div>
-      <form onSubmit={registerUser}>
+      <form className={c.register__form} onSubmit={registerUser}>
         <input
           required
           type="text"
