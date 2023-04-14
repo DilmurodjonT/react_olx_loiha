@@ -1,6 +1,6 @@
 import React from "react";
 import c from "./Navbar.module.scss";
-import { Container } from "../../utils/Components";
+import { Container, MainLink } from "../../utils/Components";
 import logo from "../../assets/logo.png";
 import { useLocation } from "react-router-dom";
 import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
@@ -60,6 +60,7 @@ const Navbar = () => {
                 icon={<FiUser />}
               />
             </div>
+            <MainLink text={"E'lon berish"} link={"/"} type={"light"} />
           </div>
         </Container>
       </div>

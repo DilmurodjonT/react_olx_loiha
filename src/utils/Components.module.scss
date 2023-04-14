@@ -1,5 +1,7 @@
+$main-color-dark: #002e34;
+
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
   padding: 0 20px;
 }
@@ -12,5 +14,37 @@
   gap: 0 10px;
   svg {
     font-size: 25px;
+  }
+}
+
+.main__link {
+  background-color: #fff;
+  padding: 12px 24px;
+  margin: 0 20px;
+  color: $main-color-dark;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 5px solid transparent;
+  transition: 0.5s;
+  &:hover {
+    border: 5px solid #fff;
+    background-color: $main-color-dark;
+    color: #fff;
+  }
+}
+
+.main__linck__dark {
+  background-color: $main-color-dark;
+  padding: 12px 24px;
+  margin: 0 20px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 5px solid transparent;
+  transition: 0.5s;
+  &:hover {
+    border: 5px solid $main-color-dark;
+    background-color: #fff;
+    color: $main-color-dark;
   }
 }

@@ -15,4 +15,15 @@ const UniversalLink = ({ text, link, icon }) => {
   );
 };
 
-export { Container, UniversalLink };
+const MainLink = ({ text, link, type }) => {
+  return (
+    <Link
+      to={link}
+      className={type === "light" ? c.main__link : c.main__linck__dark}
+    >
+      {text}
+    </Link>
+  );
+};
+
+export { Container, UniversalLink, MainLink };
