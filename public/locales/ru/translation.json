@@ -7,5 +7,9 @@
   "sign in with Google": "Войти через Google",
   "login": "Авторизоваться",
   "register": "Зарегистрироваться",
-  "or": "ИЛИ"
+  "or": "ИЛИ",
+  "your name": "Ваше имя",
+  "your email": "Ваш адрес электронной почты",
+  "your password": "Ваш пароль",
+  "your avatar": "Ваш аватар"
 }
