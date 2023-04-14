@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import c from "./AllCategories.module.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const AllCategories = () => {
+  const { t } = useTranslation();
   const [categoriesData, setCategoriesData] = useState([]);
   useEffect(() => {
     axios("https://seal-app-42lge.ondigitalocean.app/category/category-nest")
@@ -28,7 +30,7 @@ const AllCategories = () => {
 
   return (
     <section className={c.allCategories}>
-      <h3>Bosh toifalar</h3>
+      <h3>{t("main-categories")}</h3>
       <div className={c.allCategories__container}>
         {categoriesData.mainCategory_uz ? (
           categoriesData.mainCategory_uz.map((category, i) => (

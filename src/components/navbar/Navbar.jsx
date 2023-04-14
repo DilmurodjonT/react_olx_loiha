@@ -5,8 +5,11 @@ import logo from "../../assets/logo.png";
 import { useLocation } from "react-router-dom";
 import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
 import { UniversalLink } from "../../utils/Components";
+import { useTranslation } from "react-i18next";
+import i18n from "../../language/i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   console.log(pathname);
   return pathname.includes("/auth") ? (
@@ -21,20 +24,38 @@ const Navbar = () => {
             </div>
             <div className={c.navbar__menu}>
               <ul className={c.navbar__language__list}>
-                <li>O'Z</li>
+                <li
+                  onClick={() => {
+                    i18n.changeLanguage("uz");
+                  }}
+                >
+                  O'Z
+                </li>
                 <span> | </span>
-                <li>RU</li>
+                <li
+                  onClick={() => {
+                    i18n.changeLanguage("ru");
+                  }}
+                >
+                  RU
+                </li>
                 <span> | </span>
-                <li>EN</li>
+                <li
+                  onClick={() => {
+                    i18n.changeLanguage("en");
+                  }}
+                >
+                  EN
+                </li>
               </ul>
               <UniversalLink
-                text="Xabarlar"
+                text={t("message")}
                 link="/"
                 icon={<FiMessageCircle />}
               />
               <UniversalLink text="" Link="/" icon={<FiHeart />} />
               <UniversalLink
-                text="Xisobingiz"
+                text={t("account")}
                 link="/auth/login"
                 icon={<FiUser />}
               />
