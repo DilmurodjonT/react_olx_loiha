@@ -48,3 +48,24 @@ $main-color-dark: #002e34;
     color: $main-color-dark;
   }
 }
+
+.cardBtn__choose {
+  background-color: #4361ee;
+  align-items: center;
+  border-radius: 10px;
+  bottom: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  left: 10px;
+  padding: 10px;
+  position: absolute;
+  text-decoration: none;
+  width: 80%;
+}
+
+.cardBtn__choose > svg {
+  font-size: 23px;
+  margin-bottom: 3px;
+  margin-right: 10px;
+}

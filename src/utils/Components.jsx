@@ -26,4 +26,13 @@ const MainLink = ({ text, link, type }) => {
   );
 };
 
-export { Container, UniversalLink, MainLink };
+const CardBtnLink = ({ text, link, icon }) => {
+  return (
+    <Link to={link} className={c.cardBtn__choose}>
+      {icon}
+      {text}
+    </Link>
+  );
+};
+
+export { Container, UniversalLink, MainLink, CardBtnLink };

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import c from "./AllProductsHome.module.scss";
 import { Link } from "react-router-dom";
+import { CardBtnLink } from "../../utils/Components";
+import { BsHandIndexThumb } from "react-icons/bs";
 import "./styles.scss";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +10,7 @@ import { Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+// import { cardBtnLink } from "../../utils/Components";
 
 const AllProductsHome = () => {
   const [AllProductsData, setAllProductsData] = useState([]);
@@ -17,6 +20,7 @@ const AllProductsHome = () => {
       .then((response) => setAllProductsData(response.data))
       .catch((err) => console.error(err));
   }, []);
+  console.log(AllProductsData);
   return (
     <div>
       {AllProductsData.slice(0, AllProductsData.length - 1).map(
@@ -47,6 +51,18 @@ const AllProductsHome = () => {
                     <div className={c.productCard}>
                       <img src={product.productImages[0]} alt="" />
                       <h3>{product.productName_uz}</h3>
+                      <span>
+                        {`${product.productMainCategory_uz} >
+                          ${product.productSubCategory_uz}`}
+                      </span>
+                      <strong>
+                        {`${product.productSizesAndQuantity[0].price} СУМ - ${product.productSizesAndQuantity[0].price} СУМ`}
+                      </strong>
+                      <CardBtnLink
+                        icon={<BsHandIndexThumb />}
+                        text="Tanlash"
+                        link="/"
+                      />
                     </div>
                   </Link>
                 </SwiperSlide>
