@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import c from "./AllProductsHome.module.scss";
+import { Link } from "react-router-dom";
 import "./styles.scss";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,10 +40,15 @@ const AllProductsHome = () => {
             >
               {categoryItem.allRefinedProducts.map((product) => (
                 <SwiperSlide>
-                  <div className={c.productCard}>
-                    <img src={product.productImages[0]} alt="" />
-                    <h3>{product.productName_uz}</h3>
-                  </div>
+                  <Link
+                    className={c.productLink}
+                    to={`/product/${product._id}`}
+                  >
+                    <div className={c.productCard}>
+                      <img src={product.productImages[0]} alt="" />
+                      <h3>{product.productName_uz}</h3>
+                    </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

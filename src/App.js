@@ -4,6 +4,7 @@ import Login from "./routes/auth/login/Login";
 import Register from "./routes/auth/register/Register";
 import Home from "./routes/home/Home";
 import { Routes, Route } from "react-router-dom";
+import Product from "./routes/product/Product";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/register" element={<Register />} />
         </Route>
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </>
   );
