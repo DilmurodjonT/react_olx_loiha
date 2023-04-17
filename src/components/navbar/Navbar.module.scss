@@ -34,3 +34,43 @@ $main-color-dark: #002e34;
     cursor: pointer;
   }
 }
+
+.mobile__menu__icon {
+  font-size: 30px;
+  display: none;
+}
+
+.mobile__menu {
+  height: 100vh;
+  background-color: $main-color-dark;
+  width: 80vw;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 4;
+  transition: all 0.5s ease-in-out;
+}
+
+.active__menu {
+  left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar__menu {
+    gap: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__wrapper a {
+    display: none;
+  }
+
+  .mobile__menu__icon {
+    display: block;
+  }
+}

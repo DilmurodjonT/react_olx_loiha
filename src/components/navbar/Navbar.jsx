@@ -3,15 +3,21 @@ import c from "./Navbar.module.scss";
 import { Container, MainLink } from "../../utils/Components";
 import logo from "../../assets/logo.png";
 import { useLocation } from "react-router-dom";
-import { FiMessageCircle, FiHeart, FiUser } from "react-icons/fi";
+import { FiMessageCircle, FiHeart, FiUser, FiMenu } from "react-icons/fi";
 import { UniversalLink } from "../../utils/Components";
 import { useTranslation } from "react-i18next";
 import i18n from "../../language/i18next";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
+  function menuToggle() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+  console.log(isMenuOpen);
   return pathname.includes("/auth") ? (
     <></>
   ) : (
@@ -61,8 +67,12 @@ const Navbar = () => {
               />
             </div>
             <MainLink text={"E'lon berish"} link={"/"} type={"light"} />
+            <FiMenu className={c.mobile__menu__icon} onClick={menuToggle} />
           </div>
         </Container>
+        <div
+          className={`${c.mobile__menu} ${isMenuOpen ? c.active__menu : ""}`}
+        ></div>
       </div>
     </nav>
   );

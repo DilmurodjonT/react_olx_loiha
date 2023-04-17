@@ -69,3 +69,17 @@ $main-color-dark: #002e34;
   margin-bottom: 3px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 992px) {
+  .navbar__link span {
+    display: none;
+  }
+
+  .main__link {
+    padding: 8px 14px;
+  }
+
+  .main__linck__dark {
+    padding: 8px 14px;
+  }
+}

@@ -15,7 +15,6 @@
   grid-template-columns: repeat(7, 80px);
   gap: 20px;
   justify-content: space-around;
-  flex-wrap: wrap;
   margin-top: 50px;
 }
 
@@ -51,4 +50,25 @@
     #c850c0 46%,
     #ffcc70 100%
   );
+}
+
+@media screen and (max-width: 992px) {
+  .allCategories {
+    margin-top: 20px;
+    padding-inline: 20px;
+  }
+
+  .allCategories__container {
+    grid-template-columns: repeat(5, 80px);
+  }
+
+  .category__item {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .allCategories__container {
+    grid-template-columns: repeat(3, 80px);
+  }
 }

@@ -10,7 +10,7 @@ const UniversalLink = ({ text, link, icon }) => {
   return (
     <Link to={link} className={c.navbar__link}>
       {icon}
-      {text}
+      <span>{text}</span>
     </Link>
   );
 };
