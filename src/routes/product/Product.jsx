@@ -14,14 +14,14 @@ const Product = () => {
       .then((response) => setData(response.data))
       .catch((err) => console.error(err));
   }, [id]);
-  console.log(data?.singleProduct[0].productImages[0]);
+  // console.log(data?.singleProduct[0].productImages[0]);
   return (
     <div>
-      {/* {data?.singleProduct ? (
-        <img src={data?.singleProduct[0].productImage[0]} alt="" />
+      {data?.singleProduct ? (
+        <img src={data?.singleProduct[0].productImages[0]} alt="" />
       ) : (
         <></>
-      )} */}
+      )}
     </div>
   );
 };
