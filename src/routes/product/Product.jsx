@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 
 const Product = () => {
   const { id } = useParams();
-  const [data, setData] = useState({});
+  const [data, setData] = useState(null);
+  const [activeImageIndex, setactiveImageIndex] = useState(0);
 
   useEffect(() => {
     axios(
@@ -18,10 +19,26 @@ const Product = () => {
   return (
     <div>
       {data?.singleProduct ? (
-        <img src={data?.singleProduct[0].productImages[0]} alt="" />
+        <img
+          src={data?.singleProduct[0].productImages[activeImageIndex]}
+          alt=""
+        />
       ) : (
         <></>
       )}
+      {data?.singleProduct[0].productImages.map((image, index) => (
+        <img
+          style={
+            index === activeImageIndex
+              ? { border: "1px solid dodgerblue" }
+              : null
+          }
+          width={100}
+          src={image}
+          alt=""
+          onClick={() => setactiveImageIndex(index)}
+        />
+      ))}
     </div>
   );
 };
