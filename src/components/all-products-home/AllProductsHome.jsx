@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import c from "./AllProductsHome.module.scss";
 import { Link } from "react-router-dom";
 import { CardBtnLink } from "../../utils/Components";
-import { BsHandIndexThumb } from "react-icons/bs";
+import { BsCart, BsHandIndexThumb } from "react-icons/bs";
 import "./styles.scss";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -56,13 +56,25 @@ const AllProductsHome = () => {
                           ${product.productSubCategory_uz}`}
                       </span>
                       <strong>
-                        {`${product.productSizesAndQuantity[0].price} СУМ - ${product.productSizesAndQuantity[0].price} СУМ`}
+                        {`${product.productSizesAndQuantity[0].price} СУМ - ${
+                          product.productSizesAndQuantity[
+                            product.productSizesAndQuantity.length - 1
+                          ].price
+                        } СУМ`}
                       </strong>
-                      <CardBtnLink
-                        icon={<BsHandIndexThumb />}
-                        text="Tanlash"
-                        link="/"
-                      />
+                      {product.productSizesAndQuantity.length > 1 ? (
+                        <CardBtnLink
+                          icon={<BsHandIndexThumb />}
+                          text="Tanlash"
+                          link="/"
+                        />
+                      ) : (
+                        <CardBtnLink
+                          icon={<BsCart />}
+                          text="Savatga qo'shish"
+                          link="/"
+                        />
+                      )}
                     </div>
                   </Link>
                 </SwiperSlide>
