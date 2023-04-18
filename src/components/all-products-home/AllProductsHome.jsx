@@ -55,26 +55,36 @@ const AllProductsHome = () => {
                         {`${product.productMainCategory_uz} >
                           ${product.productSubCategory_uz}`}
                       </span>
-                      <strong>
-                        {`${product.productSizesAndQuantity[0].price} СУМ - ${
-                          product.productSizesAndQuantity[
-                            product.productSizesAndQuantity.length - 1
-                          ].price
-                        } СУМ`}
-                      </strong>
-                      {product.productSizesAndQuantity.length > 1 ? (
-                        <CardBtnLink
-                          icon={<BsHandIndexThumb />}
-                          text="Tanlash"
-                          link="/"
-                        />
-                      ) : (
-                        <CardBtnLink
-                          icon={<BsCart />}
-                          text="Savatga qo'shish"
-                          link="/"
-                        />
-                      )}
+                      <div>
+                        <strong>
+                          {product.productSizesAndQuantity.length > 1
+                            ? `${
+                                product.productSizesAndQuantity[0].price
+                              } СУМ - ${
+                                product.productSizesAndQuantity[
+                                  product.productSizesAndQuantity.length - 1
+                                ].price
+                              } СУМ`
+                            : `${
+                                product.productSizesAndQuantity[
+                                  product.productSizesAndQuantity.length - 1
+                                ].price
+                              } СУМ`}
+                        </strong>
+                        {product.productSizesAndQuantity.length > 1 ? (
+                          <CardBtnLink
+                            icon={<BsHandIndexThumb />}
+                            text="Tanlash"
+                            link="/"
+                          />
+                        ) : (
+                          <CardBtnLink
+                            icon={<BsCart />}
+                            text="Savatga qo'shish"
+                            link="/"
+                          />
+                        )}
+                      </div>
                     </div>
                   </Link>
                 </SwiperSlide>
